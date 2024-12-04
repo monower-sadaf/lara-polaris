@@ -25,7 +25,7 @@ const Create = () => {
 
     const handleInputChange = (field, value) => {
         setFormData({ ...formData, [field]: value });
-        setErrors({ ...errors, [field]: '' }); // Clear the error for the current field
+        setErrors({ ...errors, [field]: '' });
     };
 
     const validateForm = () => {
@@ -61,7 +61,7 @@ const Create = () => {
             return;
         }
 
-        setGlobalError(''); // Clear global error if validation passes
+        setGlobalError('');
 
         router.post('/products/create', formData);
     };
